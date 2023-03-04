@@ -2,6 +2,8 @@
 
 Chat with chatGPT on Discord.
 
+[中文 README](README.zh-tw.md)
+
 ## Features
 
 - Uses chatGPT model "gpt-3.5-turbo"
