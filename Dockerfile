@@ -2,10 +2,10 @@ FROM azul/zulu-openjdk:17-latest as builder
 
 COPY . /app
 WORKDIR /app
-RUN ./gradlew installDist
+RUN ./gradlew build
 
 FROM azul/zulu-openjdk:17-latest
 
-COPY --from=builder /app/build/install/discordgpt /app
+COPY --from=builder /app/build/libs/*.jar /app/discordgpt.jar
 WORKDIR /app
-CMD ["bin/discordgpt"]
+CMD ["java", "-jar", "discordgpt.jar"]
