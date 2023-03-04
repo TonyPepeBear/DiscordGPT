@@ -26,7 +26,7 @@ fun main() {
                 }
                 // create a thread if the message is not from a thread
                 if (!event.isFromThread) {
-                    event.message.createThreadChannel(event.message.contentDisplay)
+                    event.message.createThreadChannel(event.message.contentDisplay.substring(0, 15))
                         .setAutoArchiveDuration(ThreadChannel.AutoArchiveDuration.TIME_1_HOUR)
                         .queue { thread ->
                             val messages =
