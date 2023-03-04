@@ -41,6 +41,12 @@ services:
 
 ```
 
+Upgrading:
+
+```bash
+docker-compose pull
+```
+
 ### Environment variables
 
 - `DISCORD_CHANNEL_WHITELIST`: (required) Channel whitelist; by default, no channel will receive replies. Multiple

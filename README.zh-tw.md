@@ -36,7 +36,12 @@ services:
       DISCORD_CHANNEL_WHITELIST: "1234567890,0987654321"
       DISCORD_TOKEN: "myDiscordBotToken"
       OPENAI_API_KEY: "myOpenAiApiKey"
+```
 
+升級：
+
+```bash
+docker-compose pull
 ```
 
 ### 環境變數
