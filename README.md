@@ -29,6 +29,7 @@ version: "3.8"
 services:
   app:
     image: tonypepe/discordgpt:latest
+    restart: unless-stopped
     environment:
       BOT_LANGUAGE: "English"
       BOT_NAME: "myGPT"
