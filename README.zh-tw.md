@@ -2,6 +2,8 @@
 
 在 Discord 中和 chatGPT 聊天。
 
+![img](https://raw.githubusercontent.com/TonyPepeBear/ImageBed/main/CleanShot%202023-03-05%20at%2002.01.28.gif)
+
 ## 特色
 
 - 使用 chatGPT 模型 "gpt-3.5-turbo"

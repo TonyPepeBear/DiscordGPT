@@ -4,6 +4,8 @@ Chat with chatGPT on Discord.
 
 [中文 README](README.zh-tw.md)
 
+![img](https://raw.githubusercontent.com/TonyPepeBear/ImageBed/main/CleanShot%202023-03-05%20at%2002.01.28.gif)
+
 ## Features
 
 - Uses chatGPT model "gpt-3.5-turbo"
