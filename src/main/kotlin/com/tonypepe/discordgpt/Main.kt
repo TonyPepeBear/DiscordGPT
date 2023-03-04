@@ -26,11 +26,17 @@ fun main() {
                 }
                 // create a thread if the message is not from a thread
                 if (!event.isFromThread) {
-                    event.message.createThreadChannel(event.message.contentDisplay.substring(0, 15))
+                    val displayMessage = event.message.contentDisplay
+                    event.message.createThreadChannel(
+                        if (displayMessage.length > 15) displayMessage.substring(
+                            0,
+                            15
+                        ) else displayMessage
+                    )
                         .setAutoArchiveDuration(ThreadChannel.AutoArchiveDuration.TIME_1_HOUR)
                         .queue { thread ->
                             val messages =
-                                listOf(ChatMessage(ChatMessageRole.USER.value(), event.message.contentDisplay))
+                                listOf(ChatMessage(ChatMessageRole.USER.value(), displayMessage))
                             appChatBot.askChatGpt(messages).firstOrNull()?.let {
                                 thread.sendMessage(it.message.content).queue()
                             }
